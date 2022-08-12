@@ -1,0 +1,45 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+      <li><a class="dropdown-item active" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
+
+<section class="text-center container">
+    <h2>Search articles in wikipedia</h2>
+    <p>just enter the search query to obtain the results</p><b>Enter without any space</b>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit" class="btn btn-danger">
+    </form><br>
+
+    <div class="container">
+        <div class="content-section p-0 mt-5">
+            <a href="" class="p-0 m-0" target="_blank">
+                <div class="custom-header">
+                    <h2>title</h2>title
+                    <h6>link</h6>
+                </div>
+            </a>
+
+            <hr class="p-0 m-0">
+            <p class="description m-5 p-5">
+                details
+            </p>
+            </hr>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,113 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+{% comment %} <h2>Welcome</h2> {% endcomment %}
+<hr>
+
+
+
+<!-- Intro Section-->
+<section class="view hm-gradient" id="intro" style="background: url('{% static 'pics/panorama-3094696_1920.jpg' %}') ;">
+  <div class="site-bg-img d-flex align-items-center">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-10 col-lg-6 text-center text-md-left margins">
+          <div class="white-text">
+            <div class="wow fadeInLeft" data-wow-delay="0.3s">
+              <br>
+              <h1 class="h1-responsive font-weight-bold mt-sm-5">Your Success is Our Mission.</h1>
+              <div class="h6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+                dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                iste.
+              </div>
+            </div><br>
+            <div class="wow fadeInLeft" data-wow-delay="0.3s"><a class="btn btn-white dark-grey-text font-weight-bold ml-0" href="https://www.youtube.com/watch?v=60ItHLz5WEA" target="_blank"><i class="fa fa-play mr-1"></i> View Demo</a><a class="btn btn-outline-white" href="#">Learn more</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="card-container">
+<div class="card border-light" style="width: 18rem;" href="{% url 'home' %}">
+  <a class="a text-dark" href="{% url 'notes' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/notes.png' %}" class="card-img-top" alt="Notes pic">
+    <div class="card-body">
+        <h5 class="card-title">Notes</h5>
+      <p class="card-text">Store some notes to refer to later. They will unchanged unless deleted.</p>
+    </div>
+  </a>
+    </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'homework' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/homework.png' %}" class="card-img-top" alt="Notes pic">
+    <div class="card-body">
+        <h5 class="card-title">Homework</h5>
+      <p class="card-text">Add homeworks and assign deadlines to help manage them and track their progress.</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'youtube' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/youtube.png' %}" class="card-img-top" alt="YouTube pic">
+    <div class="card-body">
+        <h5 class="card-title">YouTube</h5>
+      <p class="card-text">Search Youtube and choose the vieo to watch or save for later.</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'todo' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/todo.png' %}" class="card-img-top" alt="To-Do pic">
+    <div class="card-body">
+        <h5 class="card-title">To-Do List</h5>
+      <p class="card-text">Add your day's activities in the to-do list and remove once finished.</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'books' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/book.png' %}" class="card-img-top" alt="Notes pic">
+    <div class="card-body">
+        <h5 class="card-title">Books</h5>
+      <p class="card-text">Browse the required book from this neatly arranged list of books.</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'dictionary' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/dict.png' %}" class="card-img-top" alt="Dictionary pic">
+    <div class="card-body">
+        <h5 class="card-title">Dictionary</h5>
+      <p class="card-text">New or troubling vocabulary in your text? Don't worry. The Dictionaryis here to help</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'wiki' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/wiki.png' %}" class="card-img-top" alt="Wiki pic">
+    <div class="card-body">
+        <h5 class="card-title">WikiPedia</h5>
+      <p class="card-text">Stuck on your homework? Use WikiPedia to find necessary help in a minute.</p>
+    </div>
+  </a>
+  </div>
+  <div class="card border-light" style="width: 18rem;">
+    <a class="a text-dark" href="{% url 'conversion' %}" style="text-decoration: none;">
+    <img src="{% static 'pics/conv.png' %}" class="card-img-top" alt="Conversion pic">
+    <div class="card-body">
+        <h5 class="card-title">Conversion</h5>
+      <p class="card-text">Check out the conversion table that lets you convert measurements to desired metrics</p>
+    </div>
+  </a>
+  </div>
+</div>
+
+
+{% endblock content %}

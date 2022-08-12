@@ -1,0 +1,79 @@
+
+/* Fonts settings */
+body, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea {
+    font-family: "Roboto", "Helvetica", Arial, sans-serif; }
+  
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+  .title, .card-title, .info-title, .footer-brand, .footer-big h5, .footer-big h4, .media .media-heading {
+    font-family: "Dosis", "Helvetica", Arial, sans-serif;
+    font-weight: 600; }
+  
+#intro{
+  background-size: cover; }
+
+
+#intro .h6 {
+  font-weight: 300;
+  line-height: 1.7; }
+
+.site-bg-img {
+  height: 100vh;
+  min-height: 480px;
+  max-height: 1080px; }
+
+
+.hm-gradient .site-bg-img {
+  background: rgba(42, 27, 161, 0.7);
+  background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%); }
+
+
+
+
+/* .navbar{
+    padding: 10px;
+    height: 40;
+    border-top: 10px;
+    margin: 5px 0px;
+}
+#navbarNavDropdown{
+    justify-content: flex-end;
+    
+}
+.nav-item{
+    width: 100px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.navbar-brand{
+    text-align: center;
+    width: 200px;
+}
+.card-container{
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    margin-bottom: 20px;
+    background: black;
+}
+.card:hover{
+    background:rgb(213, 233, 231);
+    padding: 10px;
+}
+h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#notes-container{
+    display: flex;
+    background: yellowgreen;
+}
+.bfirst{
+    background: black;
+}
+/* section{
+    background-color: aqua;
+} */ 

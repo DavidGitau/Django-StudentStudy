@@ -1,0 +1,62 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% block content %}
+
+<div class="container">
+    {% if not todos_done %}
+    <table class="table table-striped table-bordered table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{todo.title}}</td>
+                <td>
+                    <a href=" {% url 'update-todo' todo.id %} ">
+                        <div class="form-check">
+                            {% if todo.is_finished == True %}
+                            <input type="checkbox" class="form-check-input" value="" checked>
+                            {% else %}
+                            <input type="checkbox" class="form-check-input" value="">
+                            {% endif %}
+                            <label for="flexCheckDefault" class="form-check-label text-light">
+                                Mark as completed
+                            </label>
+                        </div>
+                    </a>
+                </td>
+                <td><a href=" {% url 'delete-todo' todo.id %} ">Del</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h5>All tasks are completed!! Create to have more!!</h5>
+    {% endif %}
+</div>
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="mb-4">Create Todo</legend>
+            {{form|crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" href="" type="submit">
+                Create
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
+
